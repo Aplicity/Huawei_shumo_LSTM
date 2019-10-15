@@ -1,0 +1,75 @@
+dat <- read.csv('source_data.csv')
+
+heatcol <- rainbow((100*(max(dat$RSRP)-min(dat$RSRP))),
+                   start = 0.96, end = 0.8)
+heat <- 100*(max(dat$RSRP) - dat$RSRP) + 1
+
+
+# pdf('globalplot.pdf')
+
+plot(dat$X, dat$Y, col = heatcol[heat], pch = '.', 
+     main = paste('Global Heat Plot'), 
+     xlab = 'X', ylab = 'Y'
+     # xlim = c(dat$Cell.X[1] - 500, dat$Cell.X[1] + 500),
+     # ylim = c(dat$Cell.Y[1] - 1000, dat$Cell.Y[1] + 1000)
+)
+
+
+lines(unique(dat[, 2:3]), cex = 1, type = 'p', pch = '*', col = 'red')
+
+
+# plot(dat$X[1], dat$Y[1], type = 'p', pch = 24, cex = 0.7)
+for(i in 1:nrow(dat)){ # buildings
+  h <- floor(dat$Building.Height[i]/10)
+  if(h > 0){
+    hh <- floor(h/10)
+    if(hh > 0){
+      lines(dat$X[i], dat$Y[i], type = 'p', pch = 24, cex = 0.7)
+    }else{
+      lines(dat$X[i], dat$Y[i], type = 'p', pch = as.character(h), cex = 0.12)
+    }
+  }
+}
+
+# for(i in 1:nrow(dat)){ # buildings
+#   h <- floor(dat$Building.Height[i]/10)
+#   if(h == 0){
+#     if(dat$Building.Height[i] > 0){
+#       lines(dat$X[i], dat$Y[i], type = 'p', col = 'lightgray',
+#             pch = as.character(dat$Building.Height[i]), cex = 0.1)
+#     }
+#   }else{
+#     lines(dat$X[i], dat$Y[i], type = 'p', 
+#           pch = as.character(h), cex = 0.12)
+#   }
+# }
+
+
+# horizon angle
+# yy <- dat$Cell.Y[1] + 100*sign(cos(dat$Azimuth[1]))
+# xx <- dat$Cell.X[1] + 100*tan(dat$Azimuth[1]/360*2*pi)
+# yy <- dat$Cell.Y[1] + 100
+# xx <- dat$Cell.X[1] + 100
+# arrows(x0 = dat$Cell.X[1], y0 = dat$Cell.Y[1], 
+#        y1 = yy, x1 = xx,
+#        col = 'red', lwd = 0.5)
+
+# legend('topleft', legend = c('base station', 
+#                              ' < 10m',
+#                              ' 10-20m',
+#                              ' 20-30m',
+#                              ' 30-40m',
+#                              ' 40-50m', '...'),
+#        pch = c('*', 'n',
+#                '1', '2', '3', '4', '...'), 
+#        col = c('red', 'lightgray', rep('black', 5)),
+#        title = 'Legend (Station and Buildings)')
+
+
+
+# dev.off()
+
+
+
+
+
