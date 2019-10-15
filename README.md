@@ -40,5 +40,9 @@
 * train_set在百度云下载后，同目录有一个叫source_data.csv的文件，实则为train_set所有数据连接在一起，单独保存。
 * 经大赛友人说明，本次数据取自成都。同时也提供了R语言绘图代码，见 ./题外彩蛋/plot_geo.Rmd
 
-![image](https://github.com/Aplicity/Huawei_shumo_LSTM/blob/master/%E9%A2%98%E5%A4%96%E5%BD%A9%E8%9B%8B/data_show.jpeg)
+大赛友人提供的可视化：
+![](https://github.com/Aplicity/Huawei_shumo_LSTM/blob/master/%E9%A2%98%E5%A4%96%E5%BD%A9%E8%9B%8B/data_show.jpeg)
+
+我用大赛友人提供的代码plot出的图
+![](https://github.com/Aplicity/Huawei_shumo_LSTM/blob/master/%E9%A2%98%E5%A4%96%E5%BD%A9%E8%9B%8B/my_show.png)
 
