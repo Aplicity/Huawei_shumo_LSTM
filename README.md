@@ -41,8 +41,8 @@
 * 经大赛友人说明，本次数据取自成都。同时也提供了R语言绘图代码，见 ./题外彩蛋/plot_geo.Rmd
 
 大赛友人提供的可视化：
-![](https://github.com/Aplicity/Huawei_shumo_LSTM/blob/master/%E9%A2%98%E5%A4%96%E5%BD%A9%E8%9B%8B/data_show.jpeg)
+![image](https://github.com/Aplicity/Huawei_shumo_LSTM/blob/master/%E9%A2%98%E5%A4%96%E5%BD%A9%E8%9B%8B/data_show.jpeg)
 
 我用大赛友人提供的代码plot出的图
-![](https://github.com/Aplicity/Huawei_shumo_LSTM/blob/master/%E9%A2%98%E5%A4%96%E5%BD%A9%E8%9B%8B/my_show.png)
+![image](https://github.com/Aplicity/Huawei_shumo_LSTM/blob/master/%E9%A2%98%E5%A4%96%E5%BD%A9%E8%9B%8B/my_show.png)
 
