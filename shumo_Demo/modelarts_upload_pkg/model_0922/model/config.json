@@ -1,0 +1,45 @@
+{
+    "model_type": "TensorFlow",
+    "model_algorithm": "test_shumo",
+    "apis": [{
+        "protocol": "http",
+        "url": "/",
+        "method": "post",
+        "request": {
+            "Content-type": "multipart/form-data",
+            "data": {
+                "type": "object",
+                "properties": {
+                    "csv_file": {
+                        "type": "file"
+                    }
+                }
+            }
+        },
+        "response": {
+            "Content-type": "multipart/form-data",
+            "data": {
+                "type": "object",
+                "properties": {
+                    "RSRP": {
+                        "type": "array",
+                        "items": [{
+                            "type": "number"
+                        }]
+                    }
+                }
+            }
+        }
+    }],
+	"dependencies": [{
+		"installer": "pip",
+		"packages": [{
+                "restraint": "ATLEAST",
+                "package_version": "0.23.2",
+                "package_name": "pandas"
+            }
+        ]
+    }]
+	
+}
+
